@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сапёр — Неоновое поле</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-bg"></div>
+
+    <div id="app">
+        <header>
+            <h1 class="neon-text">САПЁР</h1>
+            <p class="subtitle">NEON FIELD</p>
+        </header>
+
+        <div id="game-panel">
+            <div class="panel-section">
+                <div class="stat-box">
+                    <span class="stat-icon">💣</span>
+                    <span id="mine-count" class="stat-value">80</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-icon">🚩</span>
+                    <span id="flag-count" class="stat-value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-icon">⏱</span>
+                    <span id="timer" class="stat-value">000</span>
+                </div>
+            </div>
+
+            <div class="panel-section controls">
+                <select id="difficulty" class="neon-select">
+                    <option value="easy">Лёгкий (10×10, 15 мин)</option>
+                    <option value="medium">Средний (16×16, 40 мин)</option>
+                    <option value="hard" selected>Сложный (20×20, 80 мин)</option>
+                    <option value="extreme">Экстрим (30×30, 150 мин)</option>
+                </select>
+                <button id="new-game-btn" class="neon-btn">НОВАЯ ИГРА</button>
+                <button id="sound-btn" class="neon-btn small">🔊</button>
+            </div>
+        </div>
+
+        <div id="game-container">
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <div id="game-over-overlay" class="hidden">
+            <div class="overlay-content">
+                <h2 id="overlay-title" class="neon-text">ИГРА ОКОНЧЕНА</h2>
+                <p id="overlay-message"></p>
+                <button id="overlay-restart" class="neon-btn">ИГРАТЬ СНОВА</button>
+            </div>
+        </div>
+
+        <div id="best-times">
+            <h3 class="neon-text small">ЛУЧШИЕ РЕЗУЛЬТАТЫ</h3>
+            <div id="records-list"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
